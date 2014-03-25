@@ -43,7 +43,7 @@ get '/tags/:text' do
 end
 
 get '/users/new' do 
-  @users = User.new
+  @user = User.new
   erb :"users/new"
 end  
 
