@@ -14,6 +14,7 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 
+
 get '/' do 
   @links = Link.all 
   erb :index 
@@ -30,3 +31,8 @@ post '/links' do
     redirect to('/')
 end    
 
+get '/tags/:text' do
+  tag = Tag.first(:text => params[:text])
+  @links = tag ? tag.links : []
+  erb :index
+end
