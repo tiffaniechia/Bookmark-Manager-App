@@ -8,10 +8,10 @@ class User
     property :email, String
     property :password_digest, Text
 
-    # attr_reader :password
+    attr_reader :password
     attr_accessor :password_confirmation
 
-    validates_confirmation_of :password
+    validates_confirmation_of :password 
 
     def password=(password)
       @password = password
