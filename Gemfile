@@ -5,6 +5,7 @@ gem 'dm-postgres-adapter'
 gem 'sinatra'
 
 group :development, :test do 
+  gem 'shotgun'
   gem 'capybara'
   gem 'rspec'
   gem 'database_cleaner'
