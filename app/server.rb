@@ -10,6 +10,7 @@ require_relative 'helpers/application'
 
 enable :sessions
 set :session_secret, 'super secret'
+# set :views, 'path/to/my/tiffanie_views' if you do not want to put views in the same file
 
 use Rack::Flash
 
@@ -22,7 +23,7 @@ post '/links' do
     url = params["url"]
     title = params["title"]
     tags = params["tags"].split(" ").map do |tag|
-      #this will either find the taf or create it if it doesnt exist
+      #this will either find the tag or create it if it doesnt exist
       Tag.first_or_create(:text => tag)
     end  
     Link.create(:url => url, :title => title, :tags => tags)
@@ -53,5 +54,19 @@ post '/users' do
   end  
 end 
 
+get '/sessions/new' do 
+  erb :"sessions/new"
+end
 
+post '/sessions' do 
+  email, password = params[:email], params[:password]
+  user = User.authenticate(email, password)
+    if user
+      session[:user_id] = user.id
+      redirect to('/')
+    else 
+      flash[:errors] = ["The email or password are incorrect"]
+      erb :"sessions/new"  
+    end  
+end  
 

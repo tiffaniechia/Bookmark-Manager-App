@@ -2,7 +2,7 @@
 
 <html>
 <body>
-  <% if flash[:errors] && !flash[:errors].empty? %>
+  <% if flash[:errors] && !flash[:errors].empty? %> #checking if the array exist and that it is not empty
     Sorry, there were the following problems with the form
     <ul id="errors">
       <% flash[:errors].each do |error| %>
