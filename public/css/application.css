@@ -13,6 +13,13 @@ header #logo
   margin: auto 0;
   display: flex;
   font-family: Verdana;
+  
+}
+
+header #user-links
+{
+  font-family: Verdana;
+  
 }
 
 header #sign-in
@@ -58,5 +65,5 @@ header #sign-up
 body
 {
   background-color: #19CCE8;
-  
+  font-family: Verdana;
 }

@@ -1,7 +1,5 @@
-<p> Welcome to the bookmark manager </p>
-<p> Current links: </p>
 
-<!-- <div id="new-link">
+<div id="new-link">
   <form action="/links" method="post">
   Url: <input type = "text" name ="url">
   Title: <input type ="text" name ="title">
@@ -9,10 +7,3 @@
   <input type="submit" value="Add link">
   </form>
 </div>
- -->
-
-<ul>
-  <% @links.each do |link|%> 
-  <li><a href="<%= link.url %>"><%= link.title%></a></li>
-  <% end %>
-</ul>

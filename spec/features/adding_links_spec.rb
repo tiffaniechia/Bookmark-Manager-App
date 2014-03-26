@@ -4,7 +4,7 @@ feature "User adds a new link" do
 
   scenario "when browsing the homepage" do 
     expect(Link.count).to eq(0)
-    visit '/'
+    visit '/links/new'
     add_link("http://www.makersacademy.com/", "Makers Academy")
     expect(Link.count).to eq(1)
     link = Link.first
@@ -26,7 +26,7 @@ end
 feature "adds tags to link " do
 
   scenario "with a few tags" do 
-    visit '/'
+    visit '/links/new'
     add_link("http://www.makersacademy.com/", "Makers Academy", ['education', 'ruby'])
     link = Link.first 
     #we should expect it to contrain instances of Tag object. fixed by mapping the ag instances to the text they contain
