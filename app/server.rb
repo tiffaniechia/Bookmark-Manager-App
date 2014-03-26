@@ -13,7 +13,6 @@ use Rack::Flash
 enable :sessions
 set :session_secret, 'super secret'
 set :partial_template_engine, :erb
-# set :views, 'path/to/my/tiffanie_views' if you do not want to put views in the same file 
 
 require_relative 'controllers/application'
 require_relative 'controllers/links'
