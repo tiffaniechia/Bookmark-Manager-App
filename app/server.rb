@@ -6,11 +6,11 @@ require './lib/tag'
 require './lib/user'
 require_relative 'data_mapper_setup'
 require_relative 'helpers/application'
-
+# require_relative 'helpers/session'
 
 enable :sessions
 set :session_secret, 'super secret'
-# set :views, 'path/to/my/tiffanie_views' if you do not want to put views in the same file
+# set :views, 'path/to/my/tiffanie_views' if you do not want to put views in the same file 
 
 use Rack::Flash
 

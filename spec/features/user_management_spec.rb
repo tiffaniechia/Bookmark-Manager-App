@@ -1,4 +1,8 @@
 require 'spec_helper'
+require_relative 'helpers/session'
+
+include SessionHelpers
+
 
 feature "User signups" do 
 
@@ -8,18 +12,6 @@ feature "User signups" do
     expect(User.first.email).to eq("alice@example.com")
   end  
 end 
-
-  def sign_up(email = "alice@example.com",
-              password = "oranges!",
-              password_confirmation = "oranges!")
-    visit '/users/new'
-    expect(page.status_code).to eq(200)
-    expect(page.status_code).to eq(200)
-    fill_in :email, :with => email
-    fill_in :password, :with => password
-    fill_in :password_confirmation, :with => password_confirmation
-    click_button "Sign up"
-  end
 
  
 feature "flash notice" do 
@@ -32,12 +24,14 @@ feature "flash notice" do
     
 end  
 
-feature "cannot register same user twice" do 
+feature "cannot register same user twice" do
+
   scenario "with an email that is already registered" do
     lambda {sign_up}.should change(User, :count).by(1)
     lambda {sign_up}.should change(User, :count).by(0)
     expect(page).to have_content("This email is already taken")
   end
+
 end  
 
 feature "user signs in" do 
@@ -46,13 +40,6 @@ feature "user signs in" do
     User.create(:email => 'test@test.com',
                 :password => 'test',
                 :password_confirmation => 'test')
-  end  
-
-  def sign_in(email, password)
-    visit'/sessions/new'
-    fill_in 'email', :with => email
-    fill_in 'password', :with => password
-    click_button 'Sign in'
   end  
 
   scenario "with correct credentials" do 
@@ -70,3 +57,21 @@ feature "user signs in" do
   end  
 
 end
+
+
+# feature 'user signs out' do 
+
+#   before(:each) do 
+#     User.create(:email => 'test@test.com'
+#                 :password => 'test'
+#                 :password_confirmation => 'test')
+#   end  
+
+#   scenario 'while being signed in' do 
+#     sign_in('test@test.com', 'test')
+#     click_button "Sign out"
+#     expect(page).to have_content("Good bye!")
+#     expect(page).not_to have_content("Welcome, test@test.com")
+#   end  
+
+# end  
