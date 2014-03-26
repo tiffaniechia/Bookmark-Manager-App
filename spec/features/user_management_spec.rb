@@ -31,3 +31,11 @@ feature "flash notice" do
   end
     
 end  
+
+feature "cannot register same user twice" do 
+  scenario "with an email that is already registered" do
+    lambda {sign_up}.should change(User, :count).by(1)
+    lambda {sign_up}.should change(User, :count).by(0)
+    expect(page).to have_content("This email is already taken")
+  end
+end  
