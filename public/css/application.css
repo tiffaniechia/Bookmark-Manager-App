@@ -227,7 +227,7 @@ h1
   margin-bottom: 15px;
 }
 
-.button.signup
+.button.containers
 {
  display: inline-block; /* display inline but have dimensions */
  width: 80px;
