@@ -26,7 +26,8 @@ header #logo
   /*margin: auto 15px;*/
   display: flex;
   font-family: Verdana;
-  
+  font-size: 1.1em;
+  padding-left: 8px;
 }
 
 header #user-links
