@@ -8,13 +8,16 @@
 </head> 
 
 <body>
-  <%= partial :header %>
-  <%= partial :flash %>
-  <%=yield%> 
+<div class="wrapper">
+  
+   <%= partial :header %>
+   <%= partial :flash %>
+   <%= yield%>
+   <div class="push"></div>
+</div>
+   <div id="footer">
+     <%= partial :footer %>
+   </div>
 </body>
-
-<footer>
-  <%= partial :footer %>
-</footer>
 
 </html>
