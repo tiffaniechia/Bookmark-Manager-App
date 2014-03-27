@@ -144,3 +144,9 @@ body
   margin: 7px inherit;
   font-size: 0.9em;
 }
+
+.link .user-email
+{
+  color: #5F6B6B;
+  text-decoration: none;
+}
