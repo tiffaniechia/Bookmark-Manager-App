@@ -1,8 +1,10 @@
 
-<p> Current links: </p>
+<!-- <p> Current links: </p> -->
 
-<ul>
-  <% @links.each do |link|%> 
-  <li><a href="<%= link.url %>"><%= link.title%></a></li>
-  <% end %>
-</ul>
+<div id="links-container">
+  <ul id="links">
+    <% @links.each do |link|%> 
+    <li><a href="<%= link.url %>"><%= link.title%></a></li>
+    <% end %>
+  </ul>
+</div>
