@@ -99,6 +99,7 @@ body
   background-color: #19CCE8;
   font-family: Verdana;
   height: 100%;
+  color: #5F6B6B;
 }
 
 #links-container
@@ -217,4 +218,31 @@ footer p
   color: #5F6B6B;
   font-weight: bold;
 }
+
+h1
+{
+  font-weight: bold;
+  color: #5F6B6B;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.button.signup
+{
+ display: inline-block; /* display inline but have dimensions */
+ width: 80px;
+ background-color:#5F6B6B;
+ border: 1px ;
+ color: white; /*text colour*/
+ text-decoration: none; /*no underlining*/
+ padding: 5px 8px;
+ text-align: center;
+ border-radius: 4px; /*rounded corners*/
+ margin-left: 20px;
+ margin-right: 5px;
+ font-family: Verdana;
+ font-size: 0.75em;
+}
+
+
 
