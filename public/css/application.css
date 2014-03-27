@@ -16,9 +16,14 @@ header a
 }
 
 
-header #logo
+header > *
 {
   margin: auto 0;
+}
+
+header #logo
+{
+  /*margin: auto 15px;*/
   display: flex;
   font-family: Verdana;
   
@@ -27,6 +32,10 @@ header #logo
 header #user-links
 {
   font-family: Verdana;
+  display: inline-block;
+  margin-left: auto;
+  float: right;
+  padding-right: 20px;
   
 }
 
@@ -45,8 +54,6 @@ a.button.highlighted
  border-radius: 4px; /*rounded corners*/
  margin-left: 5px;
  margin-right: 5px;
- position: relative;
- left: 850px;
  font-family: Verdana;
  font-size: 0.75em;
  /*text-shadow: 0 0 2px rgba(0,0,0, 0.4);*/ /*for readability*/
@@ -66,8 +73,6 @@ header #sign-in
   border-radius: 4px; /*rounded corners*/
   margin-left: 5px;
   margin-right: 5px;
-  position: relative;
-  left: 850px;
   font-family: Verdana;
   font-size: 0.75em;
   /*text-shadow: 0 0 2px rgba(0,0,0, 0.4); for readability*/
@@ -87,8 +92,6 @@ header #sign-up
  border-radius: 4px; /*rounded corners*/
  margin-left: 5px;
  margin-right: 5px;
- position: relative;
- left: 850px;
  font-family: Verdana;
  font-size: 0.75em;
  /*text-shadow: 0 0 2px rgba(0,0,0, 0.4);*/ /*for readability*/
@@ -150,3 +153,34 @@ body
   color: #5F6B6B;
   text-decoration: none;
 }
+
+
+footer 
+{
+  display: flex;
+  background-color: white;
+  font-size: 0.8em;
+}
+
+
+footer > *
+{
+  margin:auto inherit;
+}
+
+footer img
+{
+  vertical-align: top;
+}
+
+footer #technologies
+{
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+footer p
+{
+  padding:5px 25px;
+}
+
