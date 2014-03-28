@@ -260,14 +260,14 @@ h1
 
 .button.tags
 {
-background-color: #eae8e8;
-color: black;
-margin-left: 10px;
+  background-color: #eae8e8;
+  color: black;
+  margin-left: 10px;
 }
 
 .button.tags:hover
 {
-background-color: yellow;
+  background-color: yellow;
 }
 
 
@@ -291,16 +291,15 @@ h2
 
 #new-link li input
 {
-width: 200px;
-line-height: 20px;
+  width: 200px;
+  line-height: 20px;
 }
 
 .button.fancypants
 {
-background-color: #eae8e8;
-color: black;
-width: 205px;
-margin-left: 10px;
-
+  background-color: #eae8e8;
+  color: black;
+  width: 205px;
+  margin-left: 10px;
 }
 

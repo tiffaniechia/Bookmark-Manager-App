@@ -12,7 +12,10 @@ class User
     attr_accessor :password_confirmation
 
     validates_confirmation_of :password, :message => "Sorry, your passwords don't match"
-    validates_uniqueness_of :email 
+    validates_uniqueness_of :email
+
+    has n, :links, :through => Resource
+    has n, :tags, :through => Resource 
 
     def password=(password)
       @password = password

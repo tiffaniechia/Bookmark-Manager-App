@@ -3,6 +3,7 @@ get '/sessions/new' do
 end
 
 post '/sessions' do 
+  @email_note = params[:email]
   email, password = params[:email], params[:password]
   user = User.authenticate(email, password)
     if user

@@ -2,6 +2,9 @@
 <!-- <p> Current links: </p> -->
 
 <div id="links-container">
+  <% if params[:text] %>
+    <h2> <%= params[:text] %></h2>
+  <% end %>
   <ul id="links">
     <% @links.each do |link|%> 
       <%= partial :link, :locals => {:link => link} %>
@@ -9,7 +12,7 @@
   </ul>
 </div>
  
- <% if @tag_list %>
+
 <div id="links-container">
    <h2> Tags:</h2>
     <ul id="tags">
@@ -20,4 +23,3 @@
    
   </ul>
 </div>  
- <% end %>
