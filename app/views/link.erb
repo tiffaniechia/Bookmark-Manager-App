@@ -5,6 +5,6 @@
   </div>
   <span class="source">
     added yesterday by
-    <a class="user-email" href="#"><%= session[:user_email] %></a>
+    <a class="user-email" href="#"><%= link.user.email if link.user != nil %></a>
   </span>
 </li>

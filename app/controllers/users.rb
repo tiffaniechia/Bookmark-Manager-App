@@ -4,7 +4,7 @@ get '/users/new' do
 end  
 
 post '/users' do 
-  session[:user_email] = params[:email]
+  # session[:user_email] = params[:email]
   @user = User.create(:email => params[:email],
                       :password => params[:password],
                       :password_confirmation => params[:password_confirmation])
