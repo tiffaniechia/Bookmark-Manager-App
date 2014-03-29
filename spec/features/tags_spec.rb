@@ -19,6 +19,7 @@ feature 'shows original owner of' do
     visit '/links/new'
     add_link('iflscience.com', 'iflscience', ['bestthingever'])
     visit '/'
-    expect(page).to have_content 'added yesterday by andy@ma.com'
+    expect(page).to have_content 'by andy@ma.com'
   end  
 end  
+

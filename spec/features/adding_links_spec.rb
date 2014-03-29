@@ -15,6 +15,16 @@ feature "User adds a new link" do
     expect(link.title).to eq("Makers Academy")
   end  
 
+  scenario "shows time stamp" do 
+    visit '/users/new'
+    sign_up('andy@ma.com', '123', '123')
+    visit '/links/new'
+    add_link('iflscience.com', 'iflscience', ['bestthingever'])
+    visit '/'
+    expect(page).to have_content '2014-03-29'
+  end  
+
+
 end
 
 

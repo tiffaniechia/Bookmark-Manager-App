@@ -4,7 +4,7 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </div>
   <span class="source">
-    added yesterday by
+    added <%= link.created_at %> by
     <a class="user-email" href="#"><%= link.user.email if link.user != nil %></a>
   </span>
 </li>

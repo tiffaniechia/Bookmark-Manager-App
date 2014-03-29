@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/partial'
 require 'data_mapper'
 require 'rack-flash'
+require 'dm-timestamps'
 
 
 require_relative 'models/link'
