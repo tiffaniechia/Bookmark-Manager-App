@@ -1,4 +1,4 @@
-# Week 4 project: Bookmark Manager
+## Week 4 project: Bookmark Manager
 
 From Hackpad: 
 "This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development, in addition to what we've studied before:
