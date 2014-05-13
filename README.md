@@ -1,10 +1,43 @@
-## Week 4 project: Bookmark Manager
+##Bookmark Manager
 
-From Hackpad: 
-"This week's project is a bookmark manager. The goal is to expose you to the following aspects of web development, in addition to what we've studied before:
+The goal of this task is to learn about Sinatra, Relational Databases, and Security via a Bookmark Manager  where users can keep a list of their favourite sites.
+This Bookmark Manager will be similar to pineapple.io or delicious.com in spirit.
 
-Integration testing: Capybara (Monday)
-Relational databases (Tuesday and Wednesday)
-Security considerations (Thursday)
+This app allows a user to add a favourite link with tags. Each post belongs to a user and is stamped as such. Each tag has many posts and therefore posts can be searched via tags.
 
-In addition to the technologies mentioned above, this project is going to be more challenging on the front-end. You shouldn't need more than we've covered in the previous weeks but you should expect to spend more time on the front-end, compared to Sudoku – web version. Of course, we'll also continue to be using the technologies we're familiar with: Sinatra, RSpec, etc."
+A rudimentary security feature has been added via BCrypt as well.
+
+This task was created by [Evgeny Shadchnev](https://github.com/shadchnev).
+
+##
+
+###Home page with list of bookmarked links with the poster's details
+![screenshot](public/images/home.png)
+
+###Search by tags
+![screenshot](public/images/search_tag.png)
+
+###Adding links
+![screenshot](public/images/add_link.png)
+
+###Login page with error message
+![screenshot](public/images/login_error.png)
+
+
+
+##Stack:
+- Ruby
+- Sinatra
+- Postgresql
+- Datamapper
+- bcrypt-ruby
+- HTML
+- CSS
+- Shotgun
+- RSpec
+- Capybara
+- Database cleaner
+
+
+##Moving forward:
+The app should have the functionality to add a description instead of a stubbed one.
