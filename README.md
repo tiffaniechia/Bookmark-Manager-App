@@ -9,6 +9,8 @@ A rudimentary security feature has been added via BCrypt as well.
 
 This task was created by [Evgeny Shadchnev](https://github.com/shadchnev).
 
+(Week 6)
+
 ##
 
 ###Home page with list of bookmarked links with the poster's details
@@ -25,7 +27,7 @@ This task was created by [Evgeny Shadchnev](https://github.com/shadchnev).
 
 
 
-##Stack:
+##Technologies Used
 - Ruby
 - Sinatra
 - Postgresql
